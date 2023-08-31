@@ -1,0 +1,12 @@
+version: "3"
+services:
+  pinnacle:
+    build:
+      context: .
+      dockerfile: Dockerfile.pinnacle
+    container_name: pinnacle
+    env_file:
+    - .env
+    tty: true
+    volumes:
+      - ./:/app
